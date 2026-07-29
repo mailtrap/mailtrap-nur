@@ -1,0 +1,46 @@
+.github/workflows/build.yml
+  s_5ddfbfa48e4590::t_371409e339d429 1-15,17-40
+  s_5ddfbfa48e4590::t_0e14fc3d1b04e8 16
+lib/default.nix
+  s_5ddfbfa48e4590::t_acc94875c52993 1-8
+flake.lock
+  s_5ddfbfa48e4590::t_5f331313b39052 1-27
+overlays/default.nix
+  s_5ddfbfa48e4590::t_b117774b3695ba 1-5
+overlay.nix
+  s_5ddfbfa48e4590::t_c8827c9ef3a699 1-25
+default.nix
+  s_5ddfbfa48e4590::t_7e077dd411caea 1-23
+flake.nix
+  s_5ddfbfa48e4590::t_3adeb248a112b6 1-25
+LICENSE
+  s_5ddfbfa48e4590::t_d4f307e534632d 1-21
+README.md
+  s_5ddfbfa48e4590::t_ac32ff111bc625 3,5,13,17,19-20,50,59,68
+  s_5ddfbfa48e4590::t_c88a0e6ad19dc1 15-16
+  s_5ddfbfa48e4590::t_e52c3e543e3d7a 1-2,4,6-12,14,18,21-49,51-58,60-67,69-70
+nixos-modules/default.nix
+  s_5ddfbfa48e4590::t_687d64af113553 1-5
+ci.nix
+  s_5ddfbfa48e4590::t_a5f069a4ffe9fe 1-73
+pkgs/mailtrap-local/default.nix
+  s_5ddfbfa48e4590::t_9e90df17ffb68a 3-5,8-9,24,26,28,31-34,36-37,40-47,57
+  s_5ddfbfa48e4590::t_e86fdd1340e352 10
+  s_5ddfbfa48e4590::t_04d84fe3b810e7 1-2,6-7,11-23,25,27,29-30,35,38-39,48-56,58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "a449fc75fe31cad0805b3bdd8ce4280f3211e725",
+  "prompts": {},
+  "sessions": {
+    "s_5ddfbfa48e4590": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "64baf2c3-51b3-4957-bf02-2227bbaf8899",
+        "model": "default"
+      },
+      "human_author": null
+    }
+  }
+}
