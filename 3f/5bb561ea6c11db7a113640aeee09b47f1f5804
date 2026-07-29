@@ -1,0 +1,19 @@
+.gitignore
+  s_5ddfbfa48e4590::t_ffee1696847dbb 1-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "3f5bb561ea6c11db7a113640aeee09b47f1f5804",
+  "prompts": {},
+  "sessions": {
+    "s_5ddfbfa48e4590": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "64baf2c3-51b3-4957-bf02-2227bbaf8899",
+        "model": "default"
+      },
+      "human_author": "Leonid Shevtsov <leonid@shevtsov.me>"
+    }
+  }
+}
