@@ -9,22 +9,22 @@
 let
   inherit (stdenvNoCC.hostPlatform) system;
   shaMap = {
-    x86_64-linux = "1slbv8p52w76r7k2rkc65rrdf3p9dc9ilpvip9rwvnnjg89sqbir";
-    aarch64-linux = "1ishyd5p6pxgy144f7a0hyk5k8c14sw9czy5bhgccp8r1blnkdi8";
-    x86_64-darwin = "1p831kjs3854ck2ry8zhzak2xrjgf1w4333bwkq719zv2q5izj3s";
-    aarch64-darwin = "1vjyl30lmrwzjxm1xzvc12mv8nmy53fqh1zgyjypf65p3zxxz952";
+    x86_64-linux = "1g4farm2ss1achwvkqdbiynpgif1b24dljggzckwywiia7bk6qq2";
+    aarch64-linux = "1h913syxwb73hd8bkbsicncjggnd8fwwwr6pbl3gcvr3xzsj2p51";
+    x86_64-darwin = "1v32m3akqx576kyg02wihx44aavjnz2rw8bdz9dkx17ycc16p5hv";
+    aarch64-darwin = "1gknbz7fydnv33kqzd43j73wncwrzgmb3k3hzj77bvs16h1qxf5g";
   };
 
   urlMap = {
-    x86_64-linux = "https://github.com/mailtrap/mailtrap-local/releases/download/v0.3.0/mailtrap-local_0.3.0_linux_amd64.tar.gz";
-    aarch64-linux = "https://github.com/mailtrap/mailtrap-local/releases/download/v0.3.0/mailtrap-local_0.3.0_linux_arm64.tar.gz";
-    x86_64-darwin = "https://github.com/mailtrap/mailtrap-local/releases/download/v0.3.0/mailtrap-local_0.3.0_darwin_amd64.tar.gz";
-    aarch64-darwin = "https://github.com/mailtrap/mailtrap-local/releases/download/v0.3.0/mailtrap-local_0.3.0_darwin_arm64.tar.gz";
+    x86_64-linux = "https://github.com/mailtrap/mailtrap-local/releases/download/v0.4.1/mailtrap-local_0.4.1_linux_amd64.tar.gz";
+    aarch64-linux = "https://github.com/mailtrap/mailtrap-local/releases/download/v0.4.1/mailtrap-local_0.4.1_linux_arm64.tar.gz";
+    x86_64-darwin = "https://github.com/mailtrap/mailtrap-local/releases/download/v0.4.1/mailtrap-local_0.4.1_darwin_amd64.tar.gz";
+    aarch64-darwin = "https://github.com/mailtrap/mailtrap-local/releases/download/v0.4.1/mailtrap-local_0.4.1_darwin_arm64.tar.gz";
   };
 in
 stdenvNoCC.mkDerivation {
   pname = "mailtrap-local";
-  version = "0.3.0";
+  version = "0.4.1";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
