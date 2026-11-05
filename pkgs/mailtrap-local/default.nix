@@ -9,22 +9,22 @@
 let
   inherit (stdenvNoCC.hostPlatform) system;
   shaMap = {
-    x86_64-linux = "1g4farm2ss1achwvkqdbiynpgif1b24dljggzckwywiia7bk6qq2";
-    aarch64-linux = "1h913syxwb73hd8bkbsicncjggnd8fwwwr6pbl3gcvr3xzsj2p51";
-    x86_64-darwin = "1v32m3akqx576kyg02wihx44aavjnz2rw8bdz9dkx17ycc16p5hv";
-    aarch64-darwin = "1gknbz7fydnv33kqzd43j73wncwrzgmb3k3hzj77bvs16h1qxf5g";
+    x86_64-linux = "18jkw884gdsj96b90yyaydgpf0vgb03fak3c6psxqxmfgk59bphy";
+    aarch64-linux = "1fqxfn4q4ikwhrbq5wgdkrrbqwillc4nx6l9mkdl7r1awbpi3p60";
+    x86_64-darwin = "1bx5307mzj9z126q44icjanym7x5xms210zaq5cmr1hkcfc5z0jg";
+    aarch64-darwin = "09sbvsaybcgri56mnssdw38pkcgys0hjf1x81r4wvc7mgb87sycd";
   };
 
   urlMap = {
-    x86_64-linux = "https://github.com/mailtrap/mailtrap-local/releases/download/v0.4.1/mailtrap-local_0.4.1_linux_amd64.tar.gz";
-    aarch64-linux = "https://github.com/mailtrap/mailtrap-local/releases/download/v0.4.1/mailtrap-local_0.4.1_linux_arm64.tar.gz";
-    x86_64-darwin = "https://github.com/mailtrap/mailtrap-local/releases/download/v0.4.1/mailtrap-local_0.4.1_darwin_amd64.tar.gz";
-    aarch64-darwin = "https://github.com/mailtrap/mailtrap-local/releases/download/v0.4.1/mailtrap-local_0.4.1_darwin_arm64.tar.gz";
+    x86_64-linux = "https://github.com/mailtrap/mailtrap-local/releases/download/v0.5.0/mailtrap-local_0.5.0_linux_amd64.tar.gz";
+    aarch64-linux = "https://github.com/mailtrap/mailtrap-local/releases/download/v0.5.0/mailtrap-local_0.5.0_linux_arm64.tar.gz";
+    x86_64-darwin = "https://github.com/mailtrap/mailtrap-local/releases/download/v0.5.0/mailtrap-local_0.5.0_darwin_amd64.tar.gz";
+    aarch64-darwin = "https://github.com/mailtrap/mailtrap-local/releases/download/v0.5.0/mailtrap-local_0.5.0_darwin_arm64.tar.gz";
   };
 in
 stdenvNoCC.mkDerivation {
   pname = "mailtrap-local";
-  version = "0.4.1";
+  version = "0.5.0";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
@@ -35,9 +35,11 @@ stdenvNoCC.mkDerivation {
   nativeBuildInputs = [ installShellFiles ];
 
   installPhase = ''
+    runHook preInstall
     mkdir -p $out/bin
     cp -vr ./mailtrap-local $out/bin/mailtrap-local
     ln -s mailtrap-local $out/bin/mailtrap-sendmail
+    runHook postInstall
   '';
 
   meta = {
